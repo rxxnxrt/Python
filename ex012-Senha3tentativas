@@ -1,0 +1,18 @@
+#Deixe uma senha pré definida, o usuario deve ter apenas 3 tentativas para acertar a senha.
+#A cada tentativa falha, deve aparecer uma mensagem dizendo que restam apenas 2 tentativas, assim por diate
+#apos 3 tentativas falhas deve aparecer a mensagem ´ACESSO BLOQUEADO´ e encerrar o programa.
+
+senha_correta = "123"
+contador = 0
+
+while True:
+    senha = str(input("Digite sua senha: "))
+    if senha == senha_correta:
+        print("Senha correta!")
+        break
+    else:
+        contador += 1
+        print(f"Senha incorreta!, restam {3 - contador} tentativas")
+        if contador == 3:
+            print("Acesso bloqueado.")
+            break	

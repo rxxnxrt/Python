@@ -1,0 +1,8 @@
+#Crie uma lista com o nome de 3 frutas. Percorra essa lista exibindo os resultados!
+
+frutas = ["morango", "uva", "laranja"]
+
+for fruta in frutas:
+    print(f"eu gosto da fruta: {fruta}")
+
+print()

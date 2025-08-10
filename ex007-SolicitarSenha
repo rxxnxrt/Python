@@ -1,0 +1,13 @@
+#Solicite ao usuario sua senha, caso ele digite a senha incorreta o programa deve continuar perguntando.
+#Caso ele acerte a senha o programa deve encerrar.
+
+senha_correta = "1233214554"
+
+while True:
+    senha = input("Digite sua senha: ")
+    if senha != senha_correta:
+        
+        print(senha)
+    else:
+        break
+    

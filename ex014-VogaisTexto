@@ -1,0 +1,13 @@
+#Peça ao usuário para digitar uma palavra. 
+#Percorra cada letra da palavra e conte quantas vogais (a, e, i, o, u) ela contém.
+#No final, imprima a quantidade de vogais.
+
+texto = input("Digite um texto: ")
+VOGAIS = ("A,E,I,O,U")
+soma = 0
+
+for letra in texto:             
+    if letra.upper() in VOGAIS:
+        soma += 1
+
+print(f"A quantidade de vogais é: {soma}")  

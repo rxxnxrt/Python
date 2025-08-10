@@ -1,0 +1,13 @@
+#Crie um programa que peça um número ao usuário 
+#e faça uma contagem regressiva a partir desse número até 0.
+#A cada número, imprima uma mensagem. Quando chegar a 0, imprima "Lançar!".
+
+numero = int(input("Digite um número para a contagem regressiva: "))
+
+while numero >= 0:
+    print(f"Falta {numero}")
+    numero -= 1 
+    
+print("Lançar!")
+
+
