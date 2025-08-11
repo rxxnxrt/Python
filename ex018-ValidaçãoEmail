@@ -1,0 +1,43 @@
+#Escreva um programa que peça ao usuário para digitar um endereço de e-mail e verifique se ele é "válido" 
+#com base em algumas regras simples:
+#Deve conter um e apenas um caractere '@'.
+#Deve conter pelo menos um ponto ('.') após o '@'.
+#Não pode ter um espaço em branco.
+#Se o e-mail for válido, imprima "E-mail válido!".
+#Caso contrário, imprima uma mensagem explicando qual regra foi violada.
+
+email = input("Digite seu email: ")
+
+contador_arroba = 0
+email_valido = True
+
+for caractere in email:
+    if caractere == ' ':
+        email_valido = False
+        break
+    if caractere == '@':
+        contador_arroba += 1
+
+if not email_valido:
+    print("Erro: O e-mail não pode conter espaços em branco.")
+elif contador_arroba != 1:
+    print("Erro: O e-mail deve conter exatamente um '@'.")
+elif email.endswith('@') or email.startswith('@'):
+    print("Erro: O '@' não pode estar no começo ou no final do e-mail.")
+else:
+    posicao_arroba = email.find('@')
+    tem_ponto = False
+    
+    for i in range(posicao_arroba + 1, len(email)):
+        if email[i] == '.':
+            tem_ponto = True
+            break
+            
+    if not tem_ponto:
+        email_valido = False
+        print("Erro: Deve haver pelo menos um ponto depois do '@'.")
+    elif email.endswith('.'):
+        email_valido = False
+        print("Erro: O e-mail não pode terminar com um ponto.")
+    else:
+        print("E-mail válido!")

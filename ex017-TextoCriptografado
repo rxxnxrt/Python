@@ -1,0 +1,23 @@
+#Crie um programa que "criptografe" uma frase digitada pelo usuário, 
+#substituindo cada vogal por um caractere específico. 
+#Por exemplo, troque 'a' por '4', 'e' por '3', 'i' por '1', 'o' por '0' e 'u' por '5'. 
+#As consoantes e outros caracteres devem permanecer os mesmos.
+
+texto = input("Digite um texto para ser criptografado: ")
+texto_criptografado = ""
+
+for letra in texto:
+    if letra.lower() == "a":
+        texto_criptografado += "4"
+    elif letra.lower() == "e":
+        texto_criptografado += "3"
+    elif letra.lower() == "i":
+        texto_criptografado += "1"
+    elif letra.lower() == "o":
+        texto_criptografado += "0"
+    elif letra.lower() == "u":
+        texto_criptografado += "5"
+    else:
+        texto_criptografado += letra
+
+print(f"Texto Criptografado: {texto_criptografado}")
