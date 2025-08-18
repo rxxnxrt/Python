@@ -1,9 +1,52 @@
-senha_correta = '1233214554'
+#então você precisa usar a linha de comando para interagir com o jogo. O jogo deve funcionar da seguinte maneira:
+#Quando o jogo começar, será exibida uma mensagem de boas-vindas junto com as regras do jogo.
+#O computador deve selecionar aleatoriamente um número entre 1 e 100.
+#O usuário deve selecionar o nível de dificuldade (fácil, médio, difícil), o que determinará o número de chances de adivinhar o número.
+#O usuário deve poder inserir seu palpite.
+#Se o palpite do usuário estiver correto, o jogo deverá exibir uma mensagem de parabéns junto com o número de tentativas necessárias para adivinhar o número.
+#Se o palpite do usuário estiver incorreto, o jogo deve exibir uma mensagem indicando se o número é maior ou menor que o palpite do usuário.
+#O jogo deve terminar quando o usuário adivinhar o número correto ou ficar sem chances.
+import random
 
+print("""Seja bem vindo ao Number Guess Game!
+Eu vou pensar em um número inteiro de 0 a 100,
+Você tem que advinhar em qual número estou pensando!
+""")
+numero_secreto = random.randint(1, 100)
+
+dificuldade = int(input("""Selecione a dificuldade:
+[1]. Facil (10 chances)
+[2]. Medio (5 chances)
+[3]. Dificil (3 chances)
+"""))
+
+contador_dificuldade = 0
+if dificuldade == 1:
+    contador_dificuldade = 10
+    print("""Você selecionou a dificuldade facil!\n
+Vamos começar o jogo!\n""")
+if dificuldade == 2:
+    contador_dificuldade = 5
+    print("""Você selecionou a dificuldade media!\n
+Vamos começar o jogo!\n""")
+if dificuldade == 3:
+    contador_dificuldade = 3
+    print("""Você selecionou a dificuldade dificil!\n
+Vamos começar o jogo!\n""")
+    
+contador_palpite = 0
 while True:
-    senha = input('Digite sua senha: ')
-    if senha == senha_correta:
-        print('Senha correta!')
+    palpite = int(input("Digite qual número estou pensando: "))
+    if palpite == numero_secreto:
+        print(f"Parabéns, você acertou em {contador_palpite} tentativas!")
         break
-    else: 
-        print('Senha incorreta! Digite novamente.')
+    elif palpite < numero_secreto:
+        print(f"O número que estou pensando é maior que {palpite}!\n")
+        contador_palpite += 1
+    elif palpite > numero_secreto:
+        print(f"O número que estou pensando é menor que {palpite}!\n")
+        contador_palpite += 1
+    if contador_palpite == contador_dificuldade:
+        print(f"""Acabaram suas chances!\n
+O número que eu estava pensando era {numero_secreto}!""")
+        break
