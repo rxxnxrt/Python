@@ -1,0 +1,11 @@
+import math
+
+cateto_oposto = float(input("Digite o valor do cateto oposto: "))
+cateto_adjacente = float(input("Digite o valor do cateto adjacente: "))
+
+cateto1 = cateto_oposto ** 2
+cateto2 = cateto_adjacente ** 2
+cateto_oficial = cateto1 + cateto2
+hipotenusa = math.sqrt(cateto_oficial)
+
+print(f"O comprimento da hipotenusa é: {hipotenusa}")

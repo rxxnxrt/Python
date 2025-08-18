@@ -1,0 +1,12 @@
+#Peça ao usuário para digitar uma frase.
+#Peça ao usuário para digitar a palavra que ele deseja encontrar.
+#Peça ao usuário para digitar a palavra para a substituição.
+#Realize a substituição e mostre a nova frase.
+
+
+frase = input("Digite uma palavra ou frase: ")
+palavra_procurada = input("Digite a palavra que deseja procurar: ")
+palavra_substitur = input("Digite a palavra que deseja substituir: ")
+
+nova_frase = frase.replace(palavra_procurada, palavra_substitur)
+print(nova_frase)

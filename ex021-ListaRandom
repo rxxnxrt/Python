@@ -1,0 +1,8 @@
+#Um professor quer sortear um dos seus quarto alunos para apagar o quadro. 
+#Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido
+
+import random
+alunos = ["matheus", "rafaela", "heloisa", "amanda"]
+
+aluno_sorteado = random.choice(alunos)
+print(aluno_sorteado)	

@@ -1,0 +1,11 @@
+#Peça ao usuário que digite seu nome completo. Com base nessa informação, faça o seguinte:
+#Mostre o nome em letras maiúsculas.
+#Mostre o nome em letras minúsculas.
+#Conte e mostre o total de letras no nome (sem contar os espaços).
+
+
+frase = input("Digite o seu nome completo: ")
+print("Nome com letras maiuscula: ",frase.upper())
+print("Nome com letras minuscula: ",frase.lower())
+frase = frase.replace(" ","")
+print("Quantidade de letras no nome: ",len(frase))

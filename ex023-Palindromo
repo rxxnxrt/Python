@@ -1,0 +1,11 @@
+#Pedir ao usuário uma palavra ou frase, e verificar se ela é um palíndromo
+
+frase = input("Digite uma palavra ou frase: ")
+frase = frase.lower()
+frase= frase.replace(" ","")
+frase_invertida = (frase[::-1])
+
+if frase == frase_invertida:
+    print(f"A frase {frase} é um palindromo!")
+else:
+    print(f"A frase {frase} NÃO é um palindromo!")
