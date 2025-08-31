@@ -7,3 +7,11 @@ print("""Escolha uma das base de bases:
 [2] Converter para OCTAL:
 [2] Converter para HEXADECIMAL:""")
 opcao = int(input("Sua opção: "))
+if opcao == 1:
+    print(f"{numero} convertido para BINARIO É igual a {bin(numero)} ")
+elif opcao == 2:
+    print(f"{numero} convertido para OCTAL é igual a {oct(numero)} ")
+elif opcao == 3:
+    print(f"{numero} convertido para HEXADECIMAL é igual a {hex(numero)} ")
+else:
+    print("Opção Invalida")
