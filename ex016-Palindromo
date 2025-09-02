@@ -7,7 +7,7 @@ texto_invertido = ""
 
 for i in range(len(texto_limpo) - 1, -1, -1):
     texto_invertido += texto_limpo[i]
-
+    
 if texto_limpo == texto_invertido:
     print("É um palíndromo!")
 else:
